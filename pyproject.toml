@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "financial_system"
+version = "0.1.0"
+description = "Gerenciamento de financas"
+authors = ["Victor Cruz <gil.victor1998@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+postgres = "^4.0"
+pyramid = "^2.0"
+SQLAlchemy = "^1.4.29"
+alembic = "^1.7.5"
+transaction = "^3.0.1"
+waitress = "^2.0.0"
+celery = "^5.2.3"
+pyramid-celery = "^4.0.0"
+kombu = "^5.2.3"
+cornice = "^6.0.0"
+marshmallow = "^3.14.1"
+factory-boy = "^3.2.1"
+
+[tool.poetry.dev-dependencies]
