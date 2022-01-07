@@ -1,9 +1,14 @@
 from marshmallow import fields, Schema
 
 
-class DolarSchema(Schema):
+class BaseSchema(Schema):
     price = fields.Float(required=True)
+    created = fields.Date()
 
 
-class EuroSchema(DolarSchema):
+class DolarSchema(BaseSchema):
+    pass
+    
+
+class EuroSchema(BaseSchema):
     pass

@@ -8,48 +8,11 @@ with open(os.path.join(here, 'README.txt')) as f:
 with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
-requires = [
-    'plaster_pastedeploy',
-    'pyramid',
-    'pyramid_jinja2',
-    'pyramid_debugtoolbar',
-    'waitress',
-    'alembic',
-    'pyramid_retry',
-    'pyramid_tm',
-    'SQLAlchemy',
-    'transaction',
-    'zope.sqlalchemy',
-]
-
-tests_require = [
-    'WebTest',
-    'pytest',
-    'pytest-cov',
-]
-
 setup(
     name='financial_system',
     version='0.0',
     description='Financial System',
-    long_description=README + '\n\n' + CHANGES,
-    classifiers=[
-        'Programming Language :: Python',
-        'Framework :: Pyramid',
-        'Topic :: Internet :: WWW/HTTP',
-        'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
-    ],
-    author='',
-    author_email='',
-    url='',
-    keywords='web pyramid pylons',
-    packages=find_packages(exclude=['tests']),
-    include_package_data=True,
-    zip_safe=False,
-    extras_require={
-        'testing': tests_require,
-    },
-    install_requires=requires,
+    packages=find_packages(),
     entry_points={
         'paste.app_factory': [
             'main = financial_system:main',

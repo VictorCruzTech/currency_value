@@ -1,5 +1,3 @@
-import logging
-
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import scoped_session
@@ -8,13 +6,8 @@ from sqlalchemy.schema import MetaData
 from zope.sqlalchemy import register
 
 
-# from .dolar import DolarPrice  # flake8: noqa
-# from .euro import EuroPrice  # flake8: noqa
-
 DBSession = scoped_session(sessionmaker(autoflush=False))
 register(DBSession)
-
-logger = logging.getLogger(__name__)
 
 NAMING_CONVENTION = {
     "ix": 'ix_%(column_0_label)s',
